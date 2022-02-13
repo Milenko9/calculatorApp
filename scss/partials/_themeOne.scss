@@ -1,0 +1,153 @@
+.calculator {
+  width: 375px;
+  height: 650px;
+  margin: 0 auto;
+  background-color: $TOneMainBckg;
+  margin-top: 30px;
+  padding: 0 30px;
+  .headCalculator {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      width: 50%;
+      padding-top: 35px;
+      h1 {
+        color: $White;
+      }
+    }
+    .bckgTheme {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      .themePar {
+        width: 55%;
+        p {
+          color: $White;
+          font-size: 13px;
+          padding: 57px 0 0 12px;
+        }
+      }
+      .themeNumbers {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .numbers {
+          height: 50%;
+          p {
+            color: $White;
+            font-size: 12px;
+            letter-spacing: 15px;
+            padding: 32px 0 0 8px;
+          }
+        }
+        .pickNumbers {
+          height: 28%;
+          background-color: $TOneScreenBckg;
+          border-radius: 14px;
+          padding: 4px;
+          cursor: pointer;
+          .redDot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $TOneKeyBckgToggle;
+            margin-top: 2px;
+            &:hover {
+              background-color: $TOneKeyShadowBckgToggle;
+            }
+          }
+        }
+      }
+    }
+  }
+  .calculatorResult {
+    height: 90px;
+    background-color: $TOneScreenBckg;
+    border-radius: 15px;
+    h2 {
+      color: $White;
+      float: right;
+      font-size:32px;
+      padding: 25px 20px 0 0;
+    }
+  }
+  .calculatorBody {
+    height: 400px;
+    margin-top: 30px;
+    background-color: $TOneToggleBckgKeyPadBckg;
+    border-radius: 15px;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    button {
+      width: 22%;
+      height: 17%;
+      border: none;
+      border-radius: 7px;
+      font-size: 25px;
+      border-bottom: 4px solid #b0aeae;
+      color: $TOneTxtDarkGrayishBlue;
+      padding-top: 5px;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-size: 22px;
+      }
+    }
+    #delBtn, #resetBtn {
+      font-size: 16px;
+      background-color: $TOneKeyBckg;
+      border-color: $TOneKeyShadow;
+      color: $White;
+      &:hover {
+        font-size: 14px;
+      }
+    }
+    #resetBtn {
+      width: 48%;
+    }
+    #equalBtn {
+      width: 48%;
+      font-size: 15px;
+      background-color: $TOneKeyBckgToggle;
+      border-color: $TOneKeyShadowBckgToggle;
+      color: $White;
+      &:hover {
+        font-size: 14px;
+        color:black;
+      }
+    }
+  }
+}
+.codedBy {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 10px;
+  text-align: center;
+  color: $White;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+
+@media (min-width: 1200px) {
+  .calculator {
+    width: 550px;
+    .headCalculator {
+      .bckgTheme {
+        width: 32%;
+      }
+    }
+    .calculatorBody {
+      padding: 26px;
+      button {
+        width: 21%;
+        height: 16%;
+      }
+    }
+  }
+}
